@@ -1,6 +1,3 @@
-
-#include <Arduino.h>
-
 #include "drive.h"
 #include "encoder.h"
 
@@ -43,7 +40,7 @@ class Motor{
             
             this->power_percent = pwr_percent;
             float percent = float(pwr_percent)/100;
-            pwr = int(255 * percent);
+            pwr = int(150 * percent);
 
             if(power_percent < 0)
                 motor.driveMotBackward(abs(pwr));        
